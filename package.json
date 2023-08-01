@@ -1,0 +1,29 @@
+{
+  "name": "goit-hw-node-1",
+  "version": "1.0.0",
+  "description": "app contacts",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PotiykoEvgenij/goit-hw-node-1.git"
+  },
+  "keywords": [
+    "contacts"
+  ],
+  "author": "Yevgen Potiiko",
+  "license": "CLI",
+  "bugs": {
+    "url": "https://github.com/PotiykoEvgenij/goit-hw-node-1/issues"
+  },
+  "homepage": "https://github.com/PotiykoEvgenij/goit-hw-node-1#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
