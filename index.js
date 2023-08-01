@@ -27,11 +27,8 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     default:
-      console.warn('\x1B[31m Невідомий тип дії!');
+      console.warn('\x1B[31m Unknown action type!');
   }
 }
 
 invokeAction(argv);
-
-// console.log('argv:', argv);
-// console.log('contactsPath:', contactsPath);
