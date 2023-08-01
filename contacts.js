@@ -25,11 +25,16 @@ async function getContactById(contactId) {
 
 async function removeContact(contactId) {
     const contacts = await listContacts();
-    const updateContacs = contacts.filter((contact) => contact.id !== contactId);
-    // console.log('updateContacs:', updateContacs);
-    await fs.writeFile(contactsPath, JSON.stringify(updateContacs, null, 2));
-    // console.log('contactId:', contactId);
-    const removedContact = await getContactById(contactId);
+    const removedContact = contacts.filter((contact) => contact.id === contactId);
+
+    if (!removedContact) {
+        console.log("Contact with the given ID does not exist.");
+        return null;
+    }
+
+    const updatedContacts = contacts.filter((contact) => contact.id !== contactId);
+    await fs.writeFile(contactsPath, JSON.stringify(updatedContacts, null, 2));
+
     return removedContact;
 }
 

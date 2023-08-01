@@ -3,7 +3,6 @@ const { hideBin } = require('yargs/helpers');
 const contacts = require('./contacts');
 
 const argv = yargs(hideBin(process.argv)).argv;
-// const { contactsPath } = require('./contacts');
 
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
